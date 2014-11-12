@@ -3,7 +3,6 @@
 
 
    <style name="FullScreenNoActionBarAndTranslucentDecor" parent="android:Theme.Holo.Light.NoActionBar.TranslucentDecor">
-       
     </style>
 
 </resources>
