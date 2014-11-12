@@ -52,11 +52,15 @@ public class MainActivity extends BaseActivity {
             R.string.drawer_close) {
 
             public void onDrawerClosed(View view) {
+            	toolbar.setBackgroundColor(getResources().getColor(R.color.actionbar_color));
+//            	toolbar.setBackgroundDrawable(getResources().getDrawable(R.color.actionbar_color));
                 super.onDrawerClosed(view);
                 ActivityCompat.invalidateOptionsMenu(MainActivity.this);
             }
 
             public void onDrawerOpened(View drawerView) {
+            	toolbar.setBackgroundColor(getResources().getColor(R.color.actionbar_color2));
+//            	toolbar.setBackgroundDrawable(getResources().getDrawable(R.color.actionbar_color2));
                 super.onDrawerOpened(drawerView);
                 ActivityCompat.invalidateOptionsMenu(MainActivity.this);
             }
