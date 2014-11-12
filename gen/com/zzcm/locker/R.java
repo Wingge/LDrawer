@@ -1548,6 +1548,8 @@ containing a value of this type.
  Default text size for action bar title.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f080012;
+        public static final int activity_horizontal_margin=0x7f080032;
+        public static final int activity_vertical_margin=0x7f080033;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1582,6 +1584,8 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f08000d;
         public static final int disabled_alpha_material_dark=0x7f080001;
         public static final int disabled_alpha_material_light=0x7f080000;
+        public static final int item_height=0x7f080035;
+        public static final int item_width=0x7f080034;
         public static final int ldrawer_barSize=0x7f08002d;
         public static final int ldrawer_drawableSize=0x7f08002c;
         public static final int ldrawer_gapBetweenBars=0x7f080030;
@@ -1589,6 +1593,7 @@ containing a value of this type.
         public static final int ldrawer_thickness=0x7f08002f;
         public static final int ldrawer_topBottomBarArrowSize=0x7f08002e;
         public static final int navdrawer_width=0x7f08002b;
+        public static final int spacing_large=0x7f080036;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1642,8 +1647,9 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020030;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
-        public static final int ic_drawer=0x7f020033;
-        public static final int ic_launcher=0x7f020034;
+        public static final int drawer_shadow=0x7f020033;
+        public static final int ic_drawer=0x7f020034;
+        public static final int ic_launcher=0x7f020035;
     }
     public static final class id {
         public static final int action_bar=0x7f050033;
@@ -1659,6 +1665,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f050030;
         public static final int action_mode_bar_stub=0x7f05002f;
         public static final int action_mode_close_button=0x7f050022;
+        public static final int action_settings=0x7f050044;
         public static final int activity_chooser_view_content=0x7f050023;
         public static final int always=0x7f05000d;
         public static final int beginning=0x7f050012;
@@ -1669,7 +1676,7 @@ containing a value of this type.
         public static final int default_activity_button=0x7f050026;
         public static final int dialog=0x7f050010;
         public static final int disableHome=0x7f05000a;
-        public static final int drawer_layout=0x7f050041;
+        public static final int drawer=0x7f050041;
         public static final int dropdown=0x7f050011;
         public static final int edit_query=0x7f050035;
         public static final int end=0x7f050014;
@@ -1683,7 +1690,7 @@ containing a value of this type.
         public static final int listMode=0x7f050002;
         public static final int list_item=0x7f050027;
         public static final int middle=0x7f050013;
-        public static final int navdrawer=0x7f050042;
+        public static final int navdrawer=0x7f050043;
         public static final int never=0x7f05000b;
         public static final int none=0x7f050004;
         public static final int normal=0x7f050001;
@@ -1708,6 +1715,7 @@ containing a value of this type.
         public static final int submit_area=0x7f05003e;
         public static final int tabMode=0x7f050003;
         public static final int title=0x7f050029;
+        public static final int toolbar=0x7f050042;
         public static final int top=0x7f050015;
         public static final int up=0x7f050018;
         public static final int useLogo=0x7f050005;
@@ -1765,6 +1773,10 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_sample=0x7f030017;
         public static final int support_simple_spinner_dropdown_item=0x7f030018;
+        public static final int toolbar=0x7f030019;
+    }
+    public static final class menu {
+        public static final int main=0x7f0c0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

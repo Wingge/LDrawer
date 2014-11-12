@@ -1,6 +1,4 @@
-package com.zzcm.locker.drawer;
-
-import java.lang.reflect.Method;
+package com.zzcm.locker.ui.drawer;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -10,17 +8,18 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.lang.reflect.Method;
+
 import com.zzcm.locker.R;
 
 
-public class ActionBarDrawerToggle extends android.support.v7.app.ActionBarDrawerToggle {
+public class ActionBarDrawerToggle extends android.support.v4.app.ActionBarDrawerToggle {
 
     private static final String TAG = ActionBarDrawerToggle.class.getName();
 
@@ -32,20 +31,19 @@ public class ActionBarDrawerToggle extends android.support.v7.app.ActionBarDrawe
     protected DrawerArrowDrawable mDrawerImage;
     protected boolean animateEnabled;
 
-//	public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, int drawerImageRes, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
-    public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, Toolbar drawerImageRes, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
+    public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, int drawerImageRes, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
         super(activity, drawerLayout, drawerImageRes, openDrawerContentDescRes, closeDrawerContentDescRes);
     }
 
-//    public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, DrawerArrowDrawable drawerImage, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
-//        super(activity, drawerLayout, R.drawable.ic_drawer, openDrawerContentDescRes, closeDrawerContentDescRes);
-//        mActivity = activity;
-//        mDrawerLayout = drawerLayout;
-//        mOpenDrawerContentDescRes = openDrawerContentDescRes;
-//        mCloseDrawerContentDescRes = closeDrawerContentDescRes;
-//        mDrawerImage = drawerImage;
-//        animateEnabled = true;
-//    }
+    public ActionBarDrawerToggle(ActionBarActivity activity, DrawerLayout drawerLayout, DrawerArrowDrawable drawerImage, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
+        super(activity, drawerLayout, R.drawable.ic_drawer, openDrawerContentDescRes, closeDrawerContentDescRes);
+        mActivity = activity;
+        mDrawerLayout = drawerLayout;
+        mOpenDrawerContentDescRes = openDrawerContentDescRes;
+        mCloseDrawerContentDescRes = closeDrawerContentDescRes;
+        mDrawerImage = drawerImage;
+        animateEnabled = true;
+    }
 
     public void syncState() {
         if (mDrawerImage == null) {
