@@ -1771,7 +1771,7 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int activity_sample=0x7f030017;
+        public static final int app_main=0x7f030017;
         public static final int support_simple_spinner_dropdown_item=0x7f030018;
         public static final int toolbar=0x7f030019;
     }
@@ -1836,6 +1836,11 @@ containing a value of this type.
         public static final int app_name=0x7f0a000f;
         public static final int drawer_close=0x7f0a0012;
         public static final int drawer_open=0x7f0a0011;
+        public static final int navigation_drawer_close=0x7f0a0015;
+        /**  test 
+         */
+        public static final int navigation_drawer_open=0x7f0a0014;
+        public static final int setting=0x7f0a0013;
     }
     public static final class style {
         public static final int AppTheme=0x7f0b00ec;

@@ -164,7 +164,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override protected int getLayoutResource() {
-        return R.layout.activity_sample;
+        return R.layout.app_main;
     }
 
     @Override
