@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zzcm.locker" 
+    package="com.zzcm.locker"
     android:versionCode="1"
-    android:versionName="0.0.1"
-    >
-    
-    
-    <uses-sdk android:minSdkVersion="8"
-        android:targetSdkVersion="21"
-        />
+    android:versionName="0.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.zzcm.locker.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

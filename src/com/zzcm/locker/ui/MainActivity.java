@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.Menu;
@@ -30,13 +32,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_sample);
         initView();
         
-//        ActionBar ab = getSupportActionBar();
-//        ab.setDisplayHomeAsUpEnabled(true);
-//        ab.setHomeButtonEnabled(true);
-//
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mDrawerList = (ListView) findViewById(R.id.navdrawer);
 
@@ -156,14 +153,32 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-    	
-        if (item.getItemId() == android.R.id.home) {
-            if (mDrawerLayout.isDrawerOpen(mDrawerList)) {
-                mDrawerLayout.closeDrawer(mDrawerList);
-            } else {
-                mDrawerLayout.openDrawer(mDrawerList);
-            }
-        }
+    	FragmentManager fragmentManager = getSupportFragmentManager();
+    	Fragment fragment = null;
+        switch (item.getItemId()) {
+		case android.R.id.home:
+			if (mDrawerLayout.isDrawerOpen(mDrawerList)) {
+				mDrawerLayout.closeDrawer(mDrawerList);
+			} else {
+				mDrawerLayout.openDrawer(mDrawerList);
+			}
+			fragment = new WidgetFrament();
+			break;
+		case R.id.action_settings:
+			fragment = new WidgetFrament2();
+//			Bundle args = new Bundle();
+//			fragment.setArguments(args);
+			break;
+
+		default:
+			fragment = new WidgetFrament();
+			break;
+		}
+        
+        fragmentManager.beginTransaction()
+        .replace(R.id.content_frame, fragment)
+        .commit();
+        
         return super.onOptionsItemSelected(item);
     }
 

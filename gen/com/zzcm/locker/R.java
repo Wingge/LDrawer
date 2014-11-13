@@ -1549,6 +1549,12 @@ containing a value of this type.
  Default text size for action bar title.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f080012;
+        /** 
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+         */
         public static final int activity_horizontal_margin=0x7f080032;
         public static final int activity_vertical_margin=0x7f080033;
         /**  The platform's desired fixed height for a dialog along the major axis
@@ -1666,13 +1672,14 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f050030;
         public static final int action_mode_bar_stub=0x7f05002f;
         public static final int action_mode_close_button=0x7f050022;
-        public static final int action_settings=0x7f050044;
+        public static final int action_settings=0x7f050047;
         public static final int activity_chooser_view_content=0x7f050023;
         public static final int always=0x7f05000d;
         public static final int beginning=0x7f050012;
         public static final int bottom=0x7f050016;
         public static final int checkbox=0x7f05002b;
         public static final int collapseActionView=0x7f05000f;
+        public static final int content_frame=0x7f050044;
         public static final int decor_content_parent=0x7f050031;
         public static final int default_activity_button=0x7f050026;
         public static final int dialog=0x7f050010;
@@ -1708,6 +1715,7 @@ containing a value of this type.
         public static final int search_plate=0x7f05003b;
         public static final int search_src_text=0x7f05003c;
         public static final int search_voice_btn=0x7f050040;
+        public static final int section_label=0x7f050045;
         public static final int shortcut=0x7f05002c;
         public static final int showCustom=0x7f050009;
         public static final int showHome=0x7f050006;
@@ -1718,6 +1726,7 @@ containing a value of this type.
         public static final int title=0x7f050029;
         public static final int toolbar=0x7f050041;
         public static final int top=0x7f050015;
+        public static final int tv_test=0x7f050046;
         public static final int up=0x7f050018;
         public static final int useLogo=0x7f050005;
         public static final int withText=0x7f05000e;
@@ -1773,8 +1782,10 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int app_main=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
-        public static final int toolbar=0x7f030019;
+        public static final int fragment_tab=0x7f030018;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int toolbar=0x7f03001a;
+        public static final int widget_left=0x7f03001b;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1837,6 +1848,7 @@ containing a value of this type.
         public static final int app_name=0x7f0a000f;
         public static final int drawer_close=0x7f0a0012;
         public static final int drawer_open=0x7f0a0011;
+        public static final int hello_world=0x7f0a0016;
         public static final int navigation_drawer_close=0x7f0a0015;
         /**  test 
          */
