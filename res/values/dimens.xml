@@ -1,6 +1,8 @@
 <resources>
     <dimen name="navdrawer_width">260dp</dimen>
     
+    <dimen name="default_textview_min_height">48dp</dimen>
+    
     
     <dimen name="ldrawer_drawableSize">50dp</dimen>
     <dimen name="ldrawer_barSize">18dp</dimen>
