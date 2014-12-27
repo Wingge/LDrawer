@@ -43,5 +43,11 @@ public abstract class BaseActivity extends ActionBarActivity {
         toolbar.setNavigationIcon(iconRes);
     }
     
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.toolbar, menu);
+//        return true;
+//    }
     
 }

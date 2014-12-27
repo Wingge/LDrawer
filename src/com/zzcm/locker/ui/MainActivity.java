@@ -1,7 +1,9 @@
 package com.zzcm.locker.ui;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -19,6 +21,7 @@ import com.zzcm.locker.R;
 import com.zzcm.locker.ui.base.BaseActivity;
 import com.zzcm.locker.ui.drawer.ActionBarDrawerToggle;
 import com.zzcm.locker.ui.drawer.DrawerArrowDrawable;
+import com.zzcm.locker.ui.util.SDKUtil;
 
 
 public class MainActivity extends BaseActivity {
@@ -48,15 +51,23 @@ public class MainActivity extends BaseActivity {
         		drawerArrow, R.string.drawer_open,
             R.string.drawer_close) {
 
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP) 
             public void onDrawerClosed(View view) {
             	toolbar.setBackgroundColor(getResources().getColor(R.color.actionbar_color));
 //            	toolbar.setBackgroundDrawable(getResources().getDrawable(R.color.actionbar_color));
+            	if(SDKUtil.IS_L){
+            		getWindow().setStatusBarColor(getResources().getColor(R.color.actionbar_color));
+            	}
                 super.onDrawerClosed(view);
                 ActivityCompat.invalidateOptionsMenu(MainActivity.this);
             }
 
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP) 
             public void onDrawerOpened(View drawerView) {
             	toolbar.setBackgroundColor(getResources().getColor(R.color.actionbar_color2));
+            	if(SDKUtil.IS_L){
+            		getWindow().setStatusBarColor(getResources().getColor(R.color.actionbar_color2));
+            	}
 //            	toolbar.setBackgroundDrawable(getResources().getDrawable(R.color.actionbar_color2));
                 super.onDrawerOpened(drawerView);
                 ActivityCompat.invalidateOptionsMenu(MainActivity.this);
@@ -136,6 +147,7 @@ public class MainActivity extends BaseActivity {
     }
     
     DrawerLayout drawer;
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP) 
     private void initView(){
         setActionBarIcon(R.drawable.ic_drawer);
 //        GridView gridView = (GridView) findViewById(R.id.gridView);
@@ -149,6 +161,9 @@ public class MainActivity extends BaseActivity {
 //        });
         drawer = (DrawerLayout) findViewById(R.id.drawer);
         drawer.setDrawerShadow(R.drawable.drawer_shadow, Gravity.START);
+    	if(SDKUtil.IS_L){
+    		getWindow().setStatusBarColor(getResources().getColor(R.color.actionbar_color));
+    	}
     }
 
     @Override
